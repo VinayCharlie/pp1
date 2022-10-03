@@ -1,0 +1,7 @@
+hello vinay this is p1 text file
+hello
+hello 
+/dev/md44
+Where possible, use identity and network capabilities together. ...
+Work backwards from your specific use cases. ...
+Apply Zero Trust to your systems and data in accordance with their value.
