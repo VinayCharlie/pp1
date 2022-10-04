@@ -165,21 +165,156 @@
 // }
 
 
+
+
+// #include <stdio.h>
+// #include <string.h>
+// void avg(char arr[],char arr2[]){
+//     // int len=0;
+//     // for(int i=0;i<strlen(arr2);i++){
+//     //     len+=1;
+//     // }
+//     int len=strlen(arr);
+//     printf("%d\n",len);
+//     printf("%s %s\n",arr,arr2);
+
+// }
+// int main(){
+//    char a[]="Vinay";
+//    char b[]="Kumar";
+//    avg(a,b);
+// }
+
+
+
+//how to return two string
+// #include <stdio.h>
+// #include <string.h>
+// void avg(char arr[],char arr2[],char* a[],char* b[]){
+//     *a=arr;
+//     *b=arr2;
+// }
+// int main(){
+//    char a[]="Vinay";
+//    char b[]="Kumar";
+//    char* c;
+//    char* d;
+//    avg(a,b ,&c,&d);
+//    printf("%s\n",c);
+//    printf("%s\n",d);
+//    return 0;
+// }
+
+
+
+//how to return two string
+// #include <stdio.h>
+// #include <string.h>
+// void returnPointer(int arr[],int* arr2[]){
+//     *arr2=arr+2;
+// }
+// int main(){
+//    int *s;
+//    int a[]={10,2,3,4,5,6};
+//    returnPointer(a,&s);
+//    printf("%d\n",*s);
+//    return 0;
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+// void f(int *p,int *q){
+//     p=q;
+//     *p=2;
+// }
+// int i=0,j=1;
+// int main(){
+//     f(&i,&j);
+//     printf("%d %d\n",i,j);
+//     getchar();
+//     return 0;
+// }
+
+
+//return type (*pointer_name)(data type of argument);
+
+
+
+// #include <stdio.h>
+// #include <string.h>
+// int sum(int a,int b){
+//     return a+b;
+// }
+// int main(){
+//    int s=0;
+//    int (*ptr)(int,int)=&sum;
+//    s=(*ptr)(2,3);
+//    printf("%d\n",s);
+//    return 0;
+// }
+
+////<-------------fuction pointer--------------->////
+// #include <stdio.h>
+// #include <string.h>
+// int sum(int x,int y){
+//     return x+y;
+// }
+// int main(){
+//     int s=0;
+//     int (*ptr)(int,int)=&sum;
+//     s=(*ptr)(2,3);
+//     printf("%d\n",s);
+//     return 0;
+// }
+
+////<------callback fuction--------->///////
+// #include <stdio.h>
+// #include <string.h>
+// int sum(int x,int y){
+//     return x+y;
+// }
+// int main(){
+//     int s=0;
+//     int (*ptr)(int,int)=&sum;
+//     s=(*ptr)(2,3);
+//     printf("%d\n",s);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <string.h>
+// void sum(int x,int y){
+//     printf("%d", x+y);
+// }
+
+// void diply(void (*fptr)(int,int)){
+//     (*fptr)(5,1);
+// }
+// int main(){
+//     // int s=0;
+//     // int (*ptr)(int,int)=&sum;
+//     // s=(*ptr)(2,3);
+//     // printf("%d\n",s);
+//     // return 0;
+//     diply(sum);
+//    // int a[2][3]={{10,20,30},{10,20,30}};
+// }
+
 #include <stdio.h>
-int avg(int arr[],int n){
-     int count=0;
-    for(int i=0;i<n;i++){
-        count+=arr[i];
-    }
-    return count;
+
+int sum(int a,int b){
+    return a+b;
 }
+
+
 int main(){
-    int marks[5]={10,15,20,30,40 },n=sizeof(marks)/sizeof(marks[0]);
-    
-    printf("%d\n",avg(marks,n));
+    int s=0;
+    int (*ptr)(int,int)=&sum;
+    s=(*ptr)(2,3);
+    printf("%d\n",s);
+    return 0;
 }
-
-
 
 
 
